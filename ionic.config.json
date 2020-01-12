@@ -1,5 +1,7 @@
 {
   "name": "FalconScoutPit",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

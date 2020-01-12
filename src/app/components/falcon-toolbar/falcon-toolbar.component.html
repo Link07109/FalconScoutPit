@@ -1,0 +1,16 @@
+<ion-header class="ion-text-center">
+  <ion-toolbar>
+    <b>{{ title }}</b>
+    <ion-buttons slot="start">
+      <ion-button (click)="startClick()">
+        <ion-icon slot="icon-only" name="{{ startIcon }}"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-button (click)="endClick()">
+        <ion-icon slot="icon-only" name="{{ endIcon }}"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>

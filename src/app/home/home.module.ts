@@ -5,12 +5,14 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 import { HomePage } from './home.page';
+import { FalconToolbarModule } from '../components/falcon-toolbar/falcon-toolbar.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
+    FalconToolbarModule,
     RouterModule.forChild([
       {
         path: '',
