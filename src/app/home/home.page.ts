@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { BlueAllianceService } from '../data/blue-alliance.service';
 import * as $ from 'jquery';
 
@@ -13,38 +13,24 @@ export class HomePage {
   pitTeamMatches = [];
   currentEvent;
   currentMatch = {
-    _id: '5e134c577dfa9527300bb286',
-    actual_time: null,
     alliances: {
       blue: {
-        dq_team_keys: [],
-        surrogate_team_keys: [],
         team_keys: [
-          'frc435',
-          'frc2059',
-          'frc2642'
+          '',
+          '',
+          ''
         ]
       },
       red: {
-        dq_team_keys: [],
-        surrogate_team_keys: [],
         team_keys: [
-          'frc3229',
-          'frc3459',
-          'frc4291'
+          '',
+          '',
+          ''
         ]
       }
     },
-    comp_level: 'qm',
-    event_key: '2020ncwak',
-    key: '2020ncwak_qm1',
-    match_number: 1,
-    post_result_time: null,
-    predicted_time: 1,
-    score_breakdown: null,
-    set_number: 1,
-    time: null,
-    winning_alliance: ''
+    comp_level: '',
+    match_number: 0,
   };
 
   matchCollectionObservable;
@@ -56,8 +42,7 @@ export class HomePage {
 
   ionViewWillEnter() {
     this.refresh();
-    setInterval(() => this.refresh(), 5000);
-
+    setInterval(() => this.refresh(), 60000);
   }
 
   refresh() {
@@ -72,7 +57,7 @@ export class HomePage {
 
       element.team_matches.forEach(el => {
         this.pitTeamMatches.push(el);
-      })
+      });
     });
 
     this.matchCollectionObservable = this.blueAllianceService.getTeamMatches('frc5190', '2019nccmp');

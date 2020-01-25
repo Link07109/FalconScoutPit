@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 
 import { HomePage } from './home.page';
 import { FalconToolbarModule } from '../components/falcon-toolbar/falcon-toolbar.module';
+import {MatchCardModule} from '../components/match-card/match-card.module';
 
 @NgModule({
   imports: [
@@ -13,6 +14,7 @@ import { FalconToolbarModule } from '../components/falcon-toolbar/falcon-toolbar
     FormsModule,
     IonicModule,
     FalconToolbarModule,
+    MatchCardModule,
     RouterModule.forChild([
       {
         path: '',

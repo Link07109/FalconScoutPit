@@ -2,11 +2,11 @@ import { NgModule } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
 import {CommonModule} from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { FalconToolbarComponent } from './falcon-toolbar.component';
+import { MatchCardComponent } from './match-card.component';
 
 @NgModule({
-    declarations: [FalconToolbarComponent],
+    declarations: [MatchCardComponent],
     imports: [IonicModule, CommonModule, FormsModule],
-    exports: [FalconToolbarComponent]
+    exports: [MatchCardComponent]
 })
-export class FalconToolbarModule {}
+export class MatchCardModule {}

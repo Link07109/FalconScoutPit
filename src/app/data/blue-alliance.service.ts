@@ -29,7 +29,7 @@ export class BlueAllianceService {
   }
 
   getApiStuff2() {
-    return this.http.get('http://falconscout.azurewebsites.net/api/pit');
+    return this.http.get('https://falconscout.azurewebsites.net/api/pit');
   }
 
   getApiStuff() {

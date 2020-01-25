@@ -1,0 +1,43 @@
+.matchCard {
+  // height: 7.05vh;
+  max-width: 80%;
+  margin: 2% auto;
+}
+
+.teamText {
+  color: #ffffff;
+  font-weight: 500 !important;
+  font-size: 1.2em !important;
+}
+
+.rowContainer {
+  max-height: 13.7vh !important;
+}
+
+.redRow {
+  background-color: #c04d4d !important;
+}
+
+.blueRow {
+  background-color: #6874bf !important
+}
+
+.matchColumn {
+  min-width: 3vh !important;
+}
+
+.h100 {
+  height: 100%;
+}
+
+.w100 {
+  width: 100%;
+}
+
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}

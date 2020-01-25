@@ -1,0 +1,23 @@
+<ion-card class="matchCard">
+  <ion-grid class="noPadding">
+    <ion-row class="noPadding rowContainer">
+      <ion-col class="noPadding ion-text-center" size="2.4">
+        <div class="vertical-center w100"><b>{{ match.comp_level.toUpperCase() }}-{{ match.match_number }}</b></div>
+      </ion-col>
+      <ion-col size="9.6" class="noPadding">
+        <ion-grid class="noPadding">
+          <ion-row class="noPadding redRow">
+            <ion-col class="noPadding ion-text-center matchColumn" col-5 *ngFor="let team of match.alliances.red.team_keys">
+              <ion-label class="teamText">{{ team.substring(3) }}</ion-label>
+            </ion-col>
+          </ion-row>
+          <ion-row class="noPadding blueRow">
+            <ion-col class="noPadding ion-text-center matchColumn" col-5 *ngFor="let team of match.alliances.blue.team_keys">
+              <ion-label class="teamText">{{ team.substring(3) }}</ion-label>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-card>
