@@ -2,7 +2,7 @@
 
 <ion-content>
   <h2 class="ion-text-center">Current Match</h2>
-  <match-card [match]="currentMatch"></match-card>
+  <match-card *ngIf="currentMatch.match_number != 0" [match]="currentMatch"></match-card>
 
   <h2 class="ion-text-center">5190's Upcoming Matches</h2>
   <match-card [match]="match" *ngFor="let match of pitTeamMatches"></match-card>

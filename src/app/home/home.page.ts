@@ -33,9 +33,6 @@ export class HomePage {
     match_number: 0,
   };
 
-  matchCollectionObservable;
-  matchCollectionArray = [];
-
   constructor(
     private blueAllianceService: BlueAllianceService,
   ) { }
@@ -53,22 +50,36 @@ export class HomePage {
     this.pitObservable.subscribe(element => {
       this.currentEvent = element.event.name;
       this.currentMatch = element.current_match;
+      if (!this.currentMatch) { this.currentMatch = {
+          alliances: {
+            blue: {
+              team_keys: [
+                '',
+                '',
+                ''
+              ]
+            },
+            red: {
+              team_keys: [
+                '',
+                '',
+                ''
+              ]
+            }
+          },
+          comp_level: '',
+          match_number: 0,
+        };
+      }
       console.log(this.currentMatch);
 
       element.team_matches.forEach(el => {
         this.pitTeamMatches.push(el);
       });
+      this.pitTeamMatches = this.pitTeamMatches.sort((a, b) => a.predicted_time - b.predicted_time);
+
     });
 
-    this.matchCollectionObservable = this.blueAllianceService.getTeamMatches('frc5190', '2019nccmp');
-    this.matchCollectionArray = [];
-
-    this.matchCollectionObservable.subscribe(element => {
-      element.forEach(el => {
-        this.matchCollectionArray.push(el);
-      });
-      this.matchCollectionArray = this.matchCollectionArray.sort((a, b) => a.predicted_time - b.predicted_time);
-    });
   }
 
 }
