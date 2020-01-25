@@ -28,59 +28,17 @@
 .noPadding {
     padding: 0 0 0 0 !important;
   }
-  
-  .action-sheet-button.sc-ion-action-sheet-ios {
-    color: var(--ion-color-dark) !important;
-    background-color: var(--ion-color-primary) !important; // light
-  }
-  
-  .alertCSS {
-    color: var(--ion-color-dark) !important;
-    // background-color: var(--ion-color-dark) !important; // alert modal page bg color. Warning this will remove the alert transparency
-  
-    button {
-      color: var(--ion-color-secondary) !important; // button text color
-    }
-  
-    .alert-message,
-    .alert-title {
-      color: var(--ion-color-dark) !important; // text color for confirm alerts
-    }
-  
-    .alert-wrapper,
-    .sc-ion-alert-md {
-      --background: var(--ion-color-primary) !important;
-      // background-color: beige !important; // bg color of alert content
-      // background-color: var(--ion-color-dark) !important; // bg color of alert content
-    }
-  }
-  
-  ion-button {
-    --box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),0 3px 1px -2px rgba(0, 0, 0, 0.2),0 1px 5px 0 rgba(0, 0, 0, 0.12)
-  }
-  
-  b,
-  i,
-  p,
-  h2,
-  .sc-ion-card-md-h,
-  .sc-ion-card-md-s,
-  ion-icon,
-  .button, .button-md, .button-solid, .button-solid-md
-    // .hydrated
-  {
+
+  b, i, p, h2,
+  .sc-ion-card-md-h, .sc-ion-card-md-s, ion-icon,
+  .button, .button-md, .button-solid, .button-solid-md {
     color: var(--ion-color-dark) !important;
   }
   
   ion-label {
     color: var(--ion-color-dark)
   }
-  
-  ion-searchbar, ion-input, ion-textarea {
-    --placeholder-color: var(--ion-color-dark) !important;
-    color: var(--ion-color-dark) !important;
-  }
-  
+
   ion-toolbar {
     --background: var(--ion-color-light);
     --ion-color-base: var(--ion-color-light) !important;
@@ -88,72 +46,4 @@
   
   ion-card {
     background: var(--ion-color-primary) !important;
-  }
-  
-  //apply class "loadslide" to slide on page load
-  .loadSlide {
-    position: absolute;
-    left: -110%;
-  }
-  
-  .loadSlide.load {
-    -webkit-transition: 0.5s; -moz-transition: 0.5s; -ms-transition: 0.5s; -o-transition: 0.5s; transition: 0.5s;
-    left: 0 !important;
-  }
-  
-  .settings {
-    position: fixed;
-    top: 130% !important;
-    bottom: -100% !important;
-  }
-  
-  .settings.open {
-    -webkit-transition: 0.5s; -moz-transition: 0.5s; -ms-transition: 0.5s; -o-transition: 0.5s; transition: 0.5s;
-    top: 10% !important;
-    bottom: 10% !important;
-  }
-  
-  .settings.close {
-    -webkit-transition: 0.5s; -moz-transition: 0.5s; -ms-transition: 0.5s; -o-transition: 0.5s; transition: 0.5s;
-    top: 130% !important;
-    bottom: -100% !important;
-  }
-  
-  .options {
-    position: fixed;
-    left: 5% !important;
-    right: 5% !important;
-    top: 130% !important;
-    bottom: -100% !important;
-  }
-  
-  .options.show {
-    -webkit-transition: 0.5s; -moz-transition: 0.5s; -ms-transition: 0.5s; -o-transition: 0.5s; transition: 0.5s;
-    top: 10% !important;
-    bottom: 10% !important;
-  }
-  
-  .options.hidden {
-    -webkit-transition: 0.5s; -moz-transition: 0.5s; -ms-transition: 0.5s; -o-transition: 0.5s; transition: 0.5s;
-    top: 130% !important;
-    bottom: -100% !important;
-  }
-  
-  .options.left {
-    -webkit-transition: 0.5s; -moz-transition: 0.5s; -ms-transition: 0.5s; -o-transition: 0.5s; transition: 0.5s;
-    left: -100% !important;
-    right: 130% !important;
-  }
-  
-  .options.right {
-    -webkit-transition: 0.5s; -moz-transition: 0.5s; -ms-transition: 0.5s; -o-transition: 0.5s; transition: 0.5s;
-    left: 130% !important;
-    right: -100% !important;
-  }
-  
-  .options.reset {
-    left: 5% !important;
-    right: 5% !important;
-    top: 130% !important;
-    bottom: -100% !important;
   }
