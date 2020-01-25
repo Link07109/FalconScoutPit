@@ -2,36 +2,11 @@
 
 <ion-content>
   <h2 class="ion-text-center">Current Match</h2>
+  <skeleton-card [array]="pitTeamMatches"></skeleton-card>
   <match-card *ngIf="currentMatch.match_number != 0" [match]="currentMatch"></match-card>
 
   <h2 class="ion-text-center">5190's Upcoming Matches</h2>
+  <skeleton-card [array]="pitTeamMatches"></skeleton-card>
   <match-card [match]="match" *ngFor="let match of pitTeamMatches"></match-card>
 
-<!--  <div *ngIf="pitTeamMatches.length < 1">-->
-<!--    <ion-card class="matchCard" *ngFor="let match of [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]">-->
-<!--      <ion-grid class="noPadding h100">-->
-<!--        <ion-row class="noPadding rowContainer">-->
-<!--          <ion-col class="noPadding ion-text-center" size="2.4">-->
-<!--            <div style="text-align: center">-->
-<!--              <ion-spinner></ion-spinner>-->
-<!--            </div>-->
-<!--          </ion-col>-->
-<!--          <ion-col size="9.6" class="noPadding">-->
-<!--            <ion-grid class="noPadding h100">-->
-<!--              <ion-row class="noPadding redRow">-->
-<!--                <ion-col>-->
-<!--                  <ion-label class="ion-text-center w100 h100"><ion-skeleton-text animated class="w100"></ion-skeleton-text></ion-label>-->
-<!--                </ion-col>-->
-<!--              </ion-row>-->
-<!--              <ion-row class="noPadding blueRow">-->
-<!--                <ion-col>-->
-<!--                  <ion-label class="ion-text-center w100 h100"><ion-skeleton-text animated class="w100"></ion-skeleton-text></ion-label>-->
-<!--                </ion-col>-->
-<!--              </ion-row>-->
-<!--            </ion-grid>-->
-<!--          </ion-col>-->
-<!--        </ion-row>-->
-<!--      </ion-grid>-->
-<!--    </ion-card>-->
-<!--  </div>-->
 </ion-content>
