@@ -10,6 +10,9 @@ export class MatchCardComponent {
   constructor() { }
 
   @Input()
+  homeTeam: string;
+
+  @Input()
   match: {
     alliances: {
       blue: {

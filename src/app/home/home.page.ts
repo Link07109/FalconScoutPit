@@ -12,6 +12,7 @@ export class HomePage {
   pitObservable;
   pitTeamMatches = [];
   currentEvent;
+  homeTeam = '';
   currentMatch = {
     alliances: {
       blue: {
@@ -48,6 +49,7 @@ export class HomePage {
     this.pitTeamMatches = [];
 
     this.pitObservable.subscribe(element => {
+      this.homeTeam = element.home_team;
       this.currentEvent = element.event.name;
       this.currentMatch = element.current_match;
       if (!this.currentMatch) { this.currentMatch = {

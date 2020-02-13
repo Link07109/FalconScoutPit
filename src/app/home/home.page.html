@@ -3,9 +3,9 @@
 <ion-content>
   <h2 class="ion-text-center">Current Match</h2>
   <skeleton-card [array]="pitTeamMatches"></skeleton-card>
-  <match-card *ngIf="currentMatch.match_number != 0" [match]="currentMatch"></match-card>
+  <match-card *ngIf="currentMatch.match_number != 0" [homeTeam]="homeTeam" [match]="currentMatch"></match-card>
 
-  <h2 class="ion-text-center">5190's Upcoming Matches</h2>
+  <h2 class="ion-text-center">{{homeTeam.substring(3)}}'s Upcoming Matches</h2>
   <skeleton-card [array]="pitTeamMatches"></skeleton-card>
   <match-card [match]="match" *ngFor="let match of pitTeamMatches"></match-card>
 
