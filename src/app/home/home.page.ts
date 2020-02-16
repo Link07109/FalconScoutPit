@@ -40,7 +40,7 @@ export class HomePage {
 
   ionViewWillEnter() {
     this.refresh();
-    setInterval(() => this.refresh(), 60000);
+    setInterval(() => this.refresh(), 5000);
   }
 
   refresh() {

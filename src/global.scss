@@ -102,3 +102,19 @@
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
+
+.vertical-center-no {
+  margin: 0;
+  position: absolute;
+  top: 10%;
+  -ms-transform: translateY(-10%);
+  transform: translateY(-10%);
+}
+
+.horizontal-center {
+  margin: 0;
+  position: absolute;
+  left: 35%;
+  -ms-transform: translateX(35%);
+  transform: translateX(35%);
+}

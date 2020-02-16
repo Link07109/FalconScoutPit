@@ -18,7 +18,9 @@ import { FalconToolbarModule } from './components/falcon-toolbar/falcon-toolbar.
   entryComponents: [],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(),
+    IonicModule.forRoot({
+      mode: 'ios'
+    }),
     AppRoutingModule,
     HttpClientModule,
     FalconToolbarModule

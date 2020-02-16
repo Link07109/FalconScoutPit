@@ -13,33 +13,8 @@ export class BlueAllianceService {
 
   constructor(private http: HttpClient) { }
 
-  doCORSRequest(options, printResult) {
-    const x = new XMLHttpRequest();
-    x.open(options.method, this.corsApiUrl + options.url);
-    x.onload = x.onerror = () => {
-      printResult(
-        options.method + ' ' + options.url + '\n' +
-        x.status + ' ' + x.statusText + '\n\n' +
-        (x.responseText || '')
-      );
-    };
-    if (/^POST/i.test(options.method)) {
-      x.setRequestHeader('Content-Type', 'application/json'); x.send(options.data) ;
-    } // x-www-form-urlencoded
-  }
-
   getApiStuff2() {
     return this.http.get('https://falconscout.azurewebsites.net/api/pit');
-  }
-
-  getApiStuff() {
-    this.doCORSRequest({
-      method: 'GET',
-      url: 'http://falconscout.azurewebsites.net/api/pit',
-    }, (data) => {
-      console.log(data);
-    });
-
   }
 
   getTeamMatches(teamKey: string, eventKey: string) {
