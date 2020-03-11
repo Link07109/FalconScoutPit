@@ -29,35 +29,40 @@
     padding: 0 0 0 0 !important;
   }
 
-  b, i, p, h2,
-  .sc-ion-card-md-h, .sc-ion-card-md-s, ion-icon,
-  .button, .button-md, .button-solid, .button-solid-md {
-    color: var(--ion-color-dark) !important;
-  }
-  
-  ion-label {
-    color: var(--ion-color-dark)
-  }
+b, i, p, h2,
+.sc-ion-card-md-h, .sc-ion-card-md-s, ion-icon,
+.button, .button-md, .button-solid, .button-solid-md {
+  color: var(--ion-color-dark) !important;
+}
 
-  ion-toolbar {
-    --background: var(--ion-color-light);
-    --ion-color-base: var(--ion-color-light) !important;
-  }
-  
-  ion-card {
-    background: var(--ion-color-primary) !important;
-  }
+ion-label {
+  color: var(--ion-color-dark)
+}
+
+ion-toolbar {
+  --background: var(--ion-color-light);
+  --ion-color-base: var(--ion-color-light) !important;
+}
+
+ion-card {
+  background: var(--ion-color-primary) !important;
+}
+
+.lastMatchCard {
+  max-width: 30%;
+  margin: 2% auto;
+}
 
 .matchCard {
   // height: 7.05vh;
-  max-width: 80%;
+  max-width: 60%;
   margin: 2% auto;
 }
 
 .highlightedText {
   color: #fffd00;
   font-weight: 600 !important;
-  font-size: 1.3em !important;
+  font-size: 1.4em !important;
 }
 
 .matchText {

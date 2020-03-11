@@ -1,12 +1,23 @@
 <falcon-toolbar [title]="currentEvent"></falcon-toolbar>
 
 <ion-content>
-  <h2 class="ion-text-center">Current Match</h2>
-  <skeleton-card [array]="pitTeamMatches"></skeleton-card>
-  <match-card *ngIf="currentMatch.match_number != 0" [homeTeam]="homeTeam" [match]="currentMatch"></match-card>
 
-  <h2 class="ion-text-center">{{homeTeam.substring(3)}}'s Upcoming Matches</h2>
-  <skeleton-card [array]="pitTeamMatches"></skeleton-card>
-  <match-card [match]="match" *ngFor="let match of pitTeamMatches"></match-card>
+  <section class="container">
+
+    <div class="one">
+      <h2 class="ion-text-center">{{homeTeam.substring(3)}}'s Upcoming Matches</h2>
+      <skeleton-card [array]="pitTeamMatches"></skeleton-card>
+      <match-card [homeTeam]="homeTeam" [match]="match" *ngFor="let match of pitTeamMatches"></match-card>
+    </div>
+
+    <div class="two">
+      <h2 class="ion-text-center">Current Match {{ currentMatch.comp_level.toUpperCase() }}#{{ currentMatch.match_number }}</h2>
+      <last-match [homeTeam]="homeTeam" [match]="currentMatch" *ngFor="let match of pitTeamMatches"></last-match>
+
+      <h2 class="ion-text-center">Rankings</h2>
+      <rankings [rankings]="rankings"></rankings>
+    </div>
+
+  </section>
 
 </ion-content>

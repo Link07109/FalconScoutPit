@@ -1,0 +1,43 @@
+<ion-card>
+    <ion-grid class="noPadding">
+
+        <ion-row class="noPadding" style="background-color: #676767">
+            <ion-col class=" ion-text-center matchColumn" col-5>
+                <ion-label class="teamText">RANK</ion-label>
+            </ion-col>
+            <ion-col class=" ion-text-center matchColumn" col-5>
+                <ion-label class="teamText">TEAM</ion-label>
+            </ion-col>
+            <ion-col class=" ion-text-center matchColumn" col-5>
+                <ion-label class="teamText">RP</ion-label>
+            </ion-col>
+            <ion-col class=" ion-text-center matchColumn" col-5>
+                <ion-label class="teamText">W-L-T</ion-label>
+            </ion-col>
+            <ion-col class=" ion-text-center matchColumn" col-5>
+                <ion-label class="teamText">PLAYED</ion-label>
+            </ion-col>
+        </ion-row>
+
+        <ion-row class="noPadding" *ngFor="let team of rankings">
+            <ion-col class="noPadding ion-text-center matchColumn" col-5>
+                <ion-label class="teamText">{{ team.rank }}</ion-label>
+            </ion-col>
+            <ion-col class="noPadding ion-text-center matchColumn" col-5>
+                <ion-label *ngIf="team.team_key != homeTeam" class="teamText">{{ team.team_key.substring(3) }}</ion-label>
+                <ion-label *ngIf="team.team_key === homeTeam" class="highlightedText">{{ team.team_key.substring(3) }}</ion-label>
+            </ion-col>
+
+            <ion-col class=" ion-text-center matchColumn" col-5>
+                <ion-label class="teamText">{{ team.sort_orders[0] }}</ion-label>
+            </ion-col>
+            <ion-col class=" ion-text-center matchColumn" col-5>
+                <ion-label class="teamText">{{ team.record.wins + '-' + team.record.losses + '-' + team.record.ties }}</ion-label>
+            </ion-col>
+            <ion-col class=" ion-text-center matchColumn" col-5>
+                <ion-label class="teamText">{{ team.matches_played }}</ion-label>
+            </ion-col>
+        </ion-row>
+
+    </ion-grid>
+</ion-card>

@@ -11,8 +11,13 @@ export class HomePage {
 
   pitObservable;
   pitTeamMatches = [];
-  currentEvent;
-  homeTeam = '';
+
+  rankingsObservable;
+  rankings = [];
+
+  currentEvent = '2020ncpem';
+  homeTeam = 'frc1533';
+
   currentMatch = {
     alliances: {
       blue: {
@@ -40,13 +45,23 @@ export class HomePage {
 
   ionViewWillEnter() {
     this.refresh();
-    setInterval(() => this.refresh(), 5000);
+    setInterval(() => this.refresh(), 300000);
   }
 
   refresh() {
     this.pitObservable = this.blueAllianceService.getApiStuff2();
-    this.currentMatch = null;
     this.pitTeamMatches = [];
+
+    this.rankingsObservable = this.blueAllianceService.getEventRankings(this.currentEvent);
+    this.rankings = [];
+
+    this.currentMatch = null;
+
+    this.rankingsObservable.subscribe(element => {
+      element.rankings.forEach(el => {
+        this.rankings.push(el);
+      });
+    });
 
     this.pitObservable.subscribe(element => {
       this.homeTeam = element.home_team;
